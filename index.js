@@ -221,8 +221,13 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  const yearInventory = inventory.map(function(item) { return item["car_year"];});
-  return yearInventory;
+  //const yearInventory = inventory.map(function(item) { return item["car_year"];});
+  //return yearInventory;
+  const modelYears = [];
+  for(var i = 0; i < inventory.length; i++){
+    modelYears.push(inventory[i].car_year)
+  }
+  return modelYears;
 }
 
 /**
